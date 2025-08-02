@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Global Data Analysis</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&family=Roboto+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">COVID-19<span>Tracker</span></a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#comparison">Country Data</a></li>
+                <li><a href="#articles">Insights</a></li>
+                <li><a href="#awareness">Safety</a></li>
+                <li><a href="#footer">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="particles-background" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Track COVID-19. Analyze the Data. Understand the Impact.</h1>
+                <p class="subtext">Stay informed with real-time data, visual comparisons, and safety insights.</p>
+                <a href="#comparison" class="cta-button">Explore Global Dashboard</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🌍</div>
+                    <h3>Total Cases</h3>
+                    <p class="stat-value" id="total-cases">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💀</div>
+                    <h3>Total Deaths</h3>
+                    <p class="stat-value" id="total-deaths">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💉</div>
+                    <h3>Total Vaccinated</h3>
+                    <p class="stat-value" id="total-vaccinated">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔬</div>
+                    <h3>Active Cases</h3>
+                    <p class="stat-value" id="active-cases">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Comparison Section -->
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <h2>Country Comparison</h2>
+            <p class="section-subtitle">Select a country to view detailed statistics and trends</p>
+            
+            <div class="country-selector">
+                <select id="country-dropdown">
+                    <option value="">Select a Country</option>
+                    <option value="India">🇮🇳 India</option>
+                    <option value="US">🇺🇸 USA</option>
+                    <option value="China">🇨🇳 China</option>
+                    <option value="Pakistan">🇵🇰 Pakistan</option>
+                    <option value="Russia">🇷🇺 Russia</option>
+                    <option value="Brazil">🇧🇷 Brazil</option>
+                    <option value="UK">🇬🇧 UK</option>
+                    <option value="Italy">🇮🇹 Italy</option>
+                </select>
+                <button id="show-stats-btn" class="cta-button secondary">Show Statistics</button>
+            </div>
+            
+            <div class="country-cards-container">
+                <div class="country-cards-scroller">
+                    <div class="country-card" data-country="India">
+                        <div class="flag">🇮🇳</div>
+                        <h3>India</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🔴</div>
+                    </div>
+                    <div class="country-card" data-country="US">
+                        <div class="flag">🇺🇸</div>
+                        <h3>USA</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🟡</div>
+                    </div>
+                    <div class="country-card" data-country="China">
+                        <div class="flag">🇨🇳</div>
+                        <h3>China</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🟢</div>
+                    </div>
+                    <div class="country-card" data-country="Pakistan">
+                        <div class="flag">🇵🇰</div>
+                        <h3>Pakistan</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🟡</div>
+                    </div>
+                    <div class="country-card" data-country="Russia">
+                        <div class="flag">🇷🇺</div>
+                        <h3>Russia</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🔴</div>
+                    </div>
+                    <div class="country-card" data-country="Brazil">
+                        <div class="flag">🇧🇷</div>
+                        <h3>Brazil</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🔴</div>
+                    </div>
+                    <div class="country-card" data-country="UK">
+                        <div class="flag">🇬🇧</div>
+                        <h3>UK</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🟢</div>
+                    </div>
+                    <div class="country-card" data-country="Italy">
+                        <div class="flag">🇮🇹</div>
+                        <h3>Italy</h3>
+                        <div class="country-stats">
+                            <p><span>Cases:</span> <span class="cases">Loading...</span></p>
+                            <p><span>Deaths:</span> <span class="deaths">Loading...</span></p>
+                            <p><span>Recovery:</span> <span class="recovery">Loading...</span></p>
+                        </div>
+                        <div class="status-tag">🟡</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="country-details" id="country-details">
+                <div class="detail-header">
+                    <h3 id="selected-country-name">Select a country to view details</h3>
+                    <p class="country-insight" id="country-insight"></p>
+                </div>
+                
+                <div class="detail-content">
+                    <div class="chart-container">
+                        <canvas id="cases-chart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="vaccination-chart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h4>Total Deaths</h4>
+                        <p id="detail-deaths">-</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Total Recoveries</h4>
+                        <p id="detail-recoveries">-</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Tests Conducted</h4>
+                        <p id="detail-tests">-</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Vaccination Rate</h4>
+                        <p id="detail-vaccination-rate">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles" id="articles">
+        <div class="container">
+            <h2>What The Data Tells Us</h2>
+            <p class="section-subtitle">In-depth analysis and insights from the pandemic</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="india">India</button>
+                <button class="filter-btn" data-filter="usa">USA</button>
+                <button class="filter-btn" data-filter="trends">Trends</button>
+                <button class="filter-btn" data-filter="lockdowns">Lockdowns</button>
+            </div>
+            
+            <div class="articles-grid">
+                <div class="article-card" data-tags="india lockdowns">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">India</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>What triggered India's second wave, and how was it managed?</h3>
+                        <p>Analysis of the factors leading to the devastating second wave in India and the response measures implemented.</p>
+                        <div class="article-meta">
+                            <span class="author">WHO Analysis</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-tags="usa trends">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">USA</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>How did early vaccinations change infection curves in the US?</h3>
+                        <p>Examining the impact of the rapid vaccine rollout on case numbers and mortality rates across different states.</p>
+                        <div class="article-meta">
+                            <span class="author">CDC Report</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-tags="china lockdowns">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">China</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>What did zero-COVID policies achieve long-term in China?</h3>
+                        <p>Evaluating the effectiveness and sustainability of China's strict containment measures over time.</p>
+                        <div class="article-meta">
+                            <span class="author">Global Health</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-tags="pakistan trends">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1584473457409-ceb3f73ee441?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">Pakistan</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Was testing scale enough to detect community spread in Pakistan?</h3>
+                        <p>Assessing the adequacy of testing infrastructure and its impact on understanding the true spread of the virus.</p>
+                        <div class="article-meta">
+                            <span class="author">Health Ministry</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-tags="russia trends">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">Russia</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>How impactful was the Sputnik V vaccine rollout in Russia?</h3>
+                        <p>Analyzing the effectiveness of Russia's domestically developed vaccine and its adoption rates.</p>
+                        <div class="article-meta">
+                            <span class="author">Vaccine Research</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-card" data-tags="brazil lockdowns">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1584473457409-ceb3f73ee441?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                        <div class="tag">Brazil</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Why did Brazil experience multiple high infection waves?</h3>
+                        <p>Exploring the factors behind Brazil's recurring surges and the challenges in containment.</p>
+                        <div class="article-meta">
+                            <span class="author">Epidemiology Study</span>
+                            <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness Section -->
+    <section class="awareness" id="awareness">
+        <div class="container">
+            <h2>Stay Safe. Stay Smart. Stay Strong.</h2>
+            <p class="section-subtitle">Essential information for prevention and mental wellbeing</p>
+            
+            <div class="awareness-grid">
+                <div class="prevention-tips">
+                    <h3>Prevention Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <div class="tip-icon">😷</div>
+                            <h4>Wear a Mask</h4>
+                            <p>Properly fitted masks reduce transmission risk significantly.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">🧼</div>
+                            <h4>Wash Hands</h4>
+                            <p>Frequent hand washing with soap for at least 20 seconds.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">↔️</div>
+                            <h4>Maintain Distance</h4>
+                            <p>Keep at least 6 feet distance from others in public.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">💉</div>
+                            <h4>Get Vaccinated</h4>
+                            <p>Vaccines are safe and effective against severe illness.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">🧪</div>
+                            <h4>Get Tested</h4>
+                            <p>If symptomatic or exposed, get tested immediately.</p>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">🏠</div>
+                            <h4>Stay Home</h4>
+                            <p>When sick to prevent spreading illness to others.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="myth-fact">
+                    <h3>Myth vs Fact</h3>
+                    <div class="myth-fact-grid">
+                        <div class="myth-fact-item">
+                            <div class="myth">
+                                <h4>Myth</h4>
+                                <p>"COVID-19 doesn't affect young people."</p>
+                            </div>
+                            <div class="fact">
+                                <h4>Fact</h4>
+                                <p>While risk increases with age, young people can still experience severe illness, especially with variants.</p>
+                            </div>
+                        </div>
+                        <div class="myth-fact-item">
+                            <div class="myth">
+                                <h4>Myth</h4>
+                                <p>"Hot weather stops COVID-19."</p>
+                            </div>
+                            <div class="fact">
+                                <h4>Fact</h4>
+                                <p>The virus can spread in all climates, regardless of temperature or weather.</p>
+                            </div>
+                        </div>
+                        <div class="myth-fact-item">
+                            <div class="myth">
+                                <h4>Myth</h4>
+                                <p>"Vaccines contain microchips."</p>
+                            </div>
+                            <div class="fact">
+                                <h4>Fact</h4>
+                                <p>Vaccines contain only ingredients to stimulate immune response, no tracking devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mental-health">
+                    <h3>Mental Health Support</h3>
+                    <div class="quote">"Your mind matters too."</div>
+                    <p>The pandemic has been stressful for everyone. Here are resources to help:</p>
+                    <ul class="resources-list">
+                        <li><strong>WHO Mental Health Toolkit:</strong> <a href="#">Download Guide</a></li>
+                        <li><strong>National Helpline:</strong> 1-800-273-TALK (8255)</li>
+                        <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                        <li><strong>Mindfulness Apps:</strong> Headspace, Calm, Insight Timer</li>
+                    </ul>
+                    <div class="mental-tips">
+                        <h4>Tips for Coping:</h4>
+                        <ul>
+                            <li>Maintain a daily routine</li>
+                            <li>Stay connected with loved ones</li>
+                            <li>Limit news consumption</li>
+                            <li>Practice relaxation techniques</li>
+                            <li>Get regular exercise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About the Project</h3>
+                    <p>A BCA academic initiative by Faizan Ali & Danish to analyze COVID-19 trends using real-world data and web technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#comparison">Global Stats</a></li>
+                        <li><a href="#comparison">Countries</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#awareness">Awareness</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-data">
+                    <h3>Data Sources</h3>
+                    <ul>
+                        <li><a href="#">Johns Hopkins University</a></li>
+                        <li><a href="#">World Health Organization</a></li>
+                        <li><a href="#">CDC (Centers for Disease Control)</a></li>
+                        <li><a href="#">Our World in Data</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to receive updates on new data and features</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 COVID-19 Global Data Analysis. All rights reserved.</p>
+                <p>Disclaimer: Data is sourced from public repositories and may have reporting delays.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ Design: Dark-mode UI with high-contrast accessibility
 🧩 Key Sections
 1. Hero Section
 Animated particle background with real-time global stats (cases, deaths, vaccinations).
-  ![Image Alt]()
+  ![Image Alt](https://github.com/faizanalisyed2776/COVID-19-Data-Visualization-Website-/blob/2d60b411062eb53b6abcf93c0de000d01b519838/Screenshots/Hero.png)
 Bold call-to-action to explore the dashboard.
 
 2. Country Comparison

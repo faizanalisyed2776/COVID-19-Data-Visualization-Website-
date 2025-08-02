@@ -20,13 +20,14 @@ Bold call-to-action to explore the dashboard.
 2. Country Comparison
 Interactive slider with cards for 8 countries (flags, cases, recovery rates).
 ![Image Alt](https://github.com/faizanalisyed2776/COVID-19-Data-Visualization-Website-/blob/3bf244b959a224fc3e0fc549fb016f9e3265e23d/Screenshots/Countries.png)
+![Image Alt]()
 Dynamic charts (cases/deaths over time, vaccination progress).
 
 Insight prompts per country (e.g., "What triggered India’s second wave?").
 
 3. Data-Driven Articles
 Filterable cards with analysis on trends, lockdowns, and regional impacts.
-![Image Alt]()
+![Image Alt](https://github.com/faizanalisyed2776/COVID-19-Data-Visualization-Website-/blob/b52e8ae5d4b81b2e5843048cc69bfaafbe22c28c/Screenshots/Articles.png)
 Sources: WHO, CDC, and AI-generated summaries.
 
 4. Awareness Hub

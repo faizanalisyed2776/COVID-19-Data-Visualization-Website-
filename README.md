@@ -14,36 +14,32 @@ Design: Dark-mode UI with high-contrast accessibility
 🧩 Key Sections
 1. Hero Section
 Animated particle background with real-time global stats (cases, deaths, vaccinations).
-
+  ![Image Alt]()
 Bold call-to-action to explore the dashboard.
 
 2. Country Comparison
 Interactive slider with cards for 8 countries (flags, cases, recovery rates).
-
+![Image Alt]()
 Dynamic charts (cases/deaths over time, vaccination progress).
 
 Insight prompts per country (e.g., "What triggered India’s second wave?").
 
 3. Data-Driven Articles
 Filterable cards with analysis on trends, lockdowns, and regional impacts.
-
+![Image Alt]()
 Sources: WHO, CDC, and AI-generated summaries.
 
 4. Awareness Hub
 Prevention tips (masks, hygiene, vaccines).
-
+![Image Alt]()
 Myth vs Fact: Debunking Common Misconceptions.
 
 Mental health resources (helplines, apps, coping strategies).
 
-5. Responsive Design
-Mobile-first layout with collapsible navigation.
-
-Smooth animations (fades, hovers) for enhanced UX.
-
-6. Data & Creditsrces: Johns Hopkins, WHO, CDC.
-
-
 Conclusion
-This project bridges data science and public health, offering a clear window into pandemic trends while promoting safety awareness. Ideal for portfolios showcasing full-stack development, data storytelling, and user-centric design.
+This project bridges the fields of data science and public health, offering a clear window into pandemic trends while promoting safety awareness. Ideal for portfolios showcasing full-stack development, data storytelling, and Responsive Design, with mobile-first layouts and collapsible navigation.Smooth animations (fades, hovers) for enhanced UX. Data & Credits: Johns Hopkins, WHO, CDC.
+
+
+
+user-centric design.
 Academic project disclaimer and developer credits.

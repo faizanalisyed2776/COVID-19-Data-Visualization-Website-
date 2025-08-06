@@ -39,7 +39,5 @@ Mental health resources (helplines, apps, coping strategies).
 Conclusion
 This project bridges the fields of data science and public health, offering a clear window into pandemic trends while promoting safety awareness. Ideal for portfolios showcasing full-stack development, data storytelling, and Responsive Design, with mobile-first layouts and collapsible navigation.Smooth animations (fades, hovers) for enhanced UX. Data & Credits: Johns Hopkins, WHO, CDC.
 
-
-
 user-centric design.
 Academic project disclaimer and developer credits.

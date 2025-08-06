@@ -1,4 +1,3 @@
-
 An interactive web platform analyzing real-time COVID-19 data across 8 major countries (India, USA, China, etc.). Features dynamic charts, comparative tools, and educational resources to help users understand pandemic trends, vaccination progress, and safety measures.
 
 Built with:
